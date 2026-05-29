@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watrakan Accounting & Consulting Firm N.V. | Suriname</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #071018;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-bg {
+      background: linear-gradient(rgba(5, 10, 18, .80), rgba(5, 10, 18, .92)),
+        url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .glow {
+      box-shadow: 0 0 25px rgba(0, 255, 200, .15);
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #6fffd2, #6cb8ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .floating {
+      animation: floating 5s ease-in-out infinite;
+    }
+
+    @keyframes floating {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .service-card {
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      border-color: #6fffd2;
+      box-shadow: 0 0 40px rgba(111, 255, 210, .12);
+    }
+
+    .blur-orb {
+      position: absolute;
+      border-radius: 9999px;
+      filter: blur(90px);
+      opacity: .25;
+      z-index: 0;
+    }
+
+    .ticker {
+      animation: scroll 30s linear infinite;
+      white-space: nowrap;
+    }
+
+    @keyframes scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .modern-border {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .modern-border::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      padding: 1px;
+      border-radius: inherit;
+      background: linear-gradient(135deg, rgba(111, 255, 210, .5), rgba(108, 184, 255, .15), transparent);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .offer-list li {
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .offer-list li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: #6fffd2;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="blur-orb w-72 h-72 bg-cyan-400 top-20 left-0"></div>
+  <div class="blur-orb w-96 h-96 bg-blue-500 top-[700px] right-0"></div>
+  <div class="blur-orb w-72 h-72 bg-cyan-300 bottom-0 left-1/3"></div>
+
+  <header class="fixed top-0 left-0 w-full z-50 glass border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <div>
+        <h1 class="text-2xl font-extrabold tracking-wide gradient-text">WATRAKAN</h1>
+        <p class="text-xs text-gray-300 tracking-[4px] uppercase">Accounting & Consulting Firm N.V.</p>
+      </div>
+
+      <nav class="hidden md:flex gap-8 text-sm text-gray-300 font-medium">
+        <a href="#about" class="hover:text-white transition">About</a>
+        <a href="#team" class="hover:text-white transition">Team</a>
+        <a href="#contact" class="hover:text-white transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+    <div class="absolute inset-0 grid-bg opacity-20"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-16 items-center pt-32">
+
+      <div>
+        <div class="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 text-sm text-cyan-300">
+          <span class="w-2 h-2 rounded-full bg-cyan-300"></span>
+          Where Natural Resources Meet Intelligence
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-black leading-tight mb-6">
+          Operating At The Intersection Of <span class="gradient-text">Resources, Capital & Strategy</span>
+        </h1>
+
+        <p class="text-lg text-gray-300 leading-relaxed mb-8 max-w-2xl">
+          Watrakan Accounting & Consulting Firm N.V. is a strategic partner for investment and development in Suriname. We combine legal, financial and commercial expertise to structure opportunities, build partnerships and create sustainable value.
+        </p>
+
+        <div class="grid grid-cols-3 gap-6 mt-14">
+          <div>
+            <h2 class="text-3xl font-bold gradient-text">3</h2>
+            <p class="text-gray-400 text-sm">Core Sectors</p>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold gradient-text">4+</h2>
+            <p class="text-gray-400 text-sm">Caribbean Markets</p>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold gradient-text">24/7</h2>
+            <p class="text-gray-400 text-sm">Strategic Partnership</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative floating">
+        <div class="glass rounded-[35px] p-6 glow">
+          <img
+            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2070&auto=format&fit=crop"
+            class="rounded-[25px] h-[650px] w-full object-cover"
+            alt="Watrakan Team"
+          />
+        </div>
+        <div class="absolute -bottom-8 -left-8 glass p-6 rounded-3xl w-64">
+          <p class="text-gray-400 text-sm mb-2">Strategic Partner</p>
+          <h3 class="text-4xl font-black gradient-text">Suriname</h3>
+          <p class="text-sm text-gray-300 mt-2">Bridging international capital to local opportunity.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT / VISION & MISSION -->
+  <section id="about" class="py-28 px-6">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+      <div>
+        <p class="text-cyan-300 uppercase tracking-[4px] mb-4 text-sm">About Watrakan</p>
+        <h2 class="text-5xl font-black mb-6 leading-tight">
+          A Strategic Partner For <span class="gradient-text">Investment & Development</span>
+        </h2>
+        <p class="text-gray-300 text-lg leading-relaxed mb-6">
+          Operating at the intersection of resources, capital and strategy. Watrakan combines legal, financial and commercial expertise to structure opportunities, build partnerships and create sustainable value across Suriname and the Caribbean.
+        </p>
+
+        <div class="space-y-4">
+          <div class="glass p-5 rounded-2xl">
+            <h3 class="font-bold text-xl mb-2">Our Vision</h3>
+            <p class="text-gray-400">To be the leading provider of sustainable solutions for the Oil and Energy sector in Suriname and the Caribbean, empowering companies to achieve their full potential through innovative and reliable services. We aspire to create a future where our clients can seamlessly navigate the complexities of the industry, leveraging our expertise in risk analysis, information dissemination, and implementation strategies. By fostering a culture of fairness, feasibility, and sustainability, we aim to drive transformative growth and long-term success for our partners and the communities they serve.</p>
+          </div>
+
+          <div class="glass p-5 rounded-2xl">
+            <h3 class="font-bold text-xl mb-2">Our Mission</h3>
+            <p class="text-gray-400">To support clients in optimizing their financial performance and strategic decisions through expert advice and innovative solutions, as well as performing all activities related to the above in the broadest sense or that may be conducive to it. Furthermore, the Company strives to add value through accurate accounting services, in-depth financial analyses, and customized consultancy solutions that meet the unique needs of each client.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-5">
+        <!-- Oil & Energy Card -->
+        <div class="glass rounded-3xl overflow-hidden service-card transition duration-300">
+          <img src="photos/4.jpeg" alt="Oil & Energy" class="h-48 w-full object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Oil & Energy</h3>
+            <p class="text-gray-400 text-sm">Powering strategic growth in emerging energy markets.</p>
+          </div>
+        </div>
+
+        <!-- Real Estate Card -->
+        <div class="glass rounded-3xl overflow-hidden mt-10 service-card transition duration-300">
+          <img src="photos/3.jpeg" alt="Real Estate" class="h-48 w-full object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Real Estate</h3>
+            <p class="text-gray-400 text-sm">Building the foundation for economic expansion.</p>
+          </div>
+        </div>
+
+        <!-- Agribusiness Card -->
+        <div class="glass rounded-3xl overflow-hidden -mt-10 service-card transition duration-300">
+          <img src="photos/5.jpeg" alt="Agribusiness" class="h-48 w-full object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Agribusiness</h3>
+            <p class="text-gray-400 text-sm">Unlocking the value of natural capital.</p>
+          </div>
+        </div>
+
+        <!-- Financial Services Card -->
+        <div class="glass rounded-3xl overflow-hidden service-card transition duration-300">
+          <img src="photos/2.jpeg" alt="Financial Services" class="h-48 w-full object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Financial Services</h3>
+            <p class="text-gray-400 text-sm">Financial clarity for informed decision-making.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <section class="py-10 overflow-hidden border-y border-white/10 bg-black/30">
+    <div class="ticker flex gap-16 text-2xl font-bold text-white/70">
+      <span>OIL & ENERGY</span>
+      <span>REAL ESTATE</span>
+      <span>AGRIBUSINESS</span>
+      <span>FINANCIAL SERVICES</span>
+      <span>SURINAME</span>
+      <span>GUYANA</span>
+      <span>TRINIDAD & TOBAGO</span>
+      <span>CARIBBEAN</span>
+      <span>OIL & ENERGY</span>
+      <span>REAL ESTATE</span>
+      <span>AGRIBUSINESS</span>
+      <span>FINANCIAL SERVICES</span>
+      <span>SURINAME</span>
+      <span>GUYANA</span>
+      <span>TRINIDAD & TOBAGO</span>
+      <span>CARIBBEAN</span>
+    </div>
+  </section>
+
+  <!-- OIL & ENERGY -->
+  <section id="oil-energy" class="py-28 px-6 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <div>
+          <p class="text-cyan-300 uppercase tracking-[4px] mb-4 text-sm">Sector 01</p>
+          <h2 class="text-5xl font-black mb-6 leading-tight">
+            Oil & <span class="gradient-text">Energy</span>
+          </h2>
+          <p class="text-xl text-gray-300 italic mb-6">Powering strategic growth in emerging energy markets</p>
+          <p class="text-gray-400 text-lg leading-relaxed mb-8">
+            Suriname is on the front of a significant transformation in its oil and energy sector. International players are committing billions in capital, while strong local structures, partnerships and governance are essential to ensuring sustainable and responsible growth.
+          </p>
+          <p class="text-gray-400 text-lg leading-relaxed mb-8">
+            Watrakan serves as the bridge between international energy companies and local opportunity.
+          </p>
+        </div>
+
+        <div class="glass rounded-[40px] p-8 modern-border">
+          <h3 class="text-2xl font-bold mb-8">What we offer:</h3>
+          <ul class="offer-list space-y-4 text-gray-300 text-lg">
+            <li>Joint venture structuring</li>
+            <li>Local content strategy</li>
+            <li>Contracting & deal structuring</li>
+            <li>Governance & compliance</li>
+            <li>Financial structuring & reporting</li>
+            <li>Strategic market entry advisory</li>
+          </ul>
+          <p class="text-cyan-300 italic mt-8 text-sm">From deal to dashboard — we ensure investments perform and remain transparent.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- REAL ESTATE -->
+  <section id="real-estate" class="py-28 px-6 bg-black/30 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <div class="glass rounded-[40px] p-8 modern-border order-2 lg:order-1">
+          <h3 class="text-2xl font-bold mb-8">What we offer:</h3>
+          <ul class="offer-list space-y-4 text-gray-300 text-lg">
+            <li>Project development (co-development)</li>
+            <li>Investment structuring</li>
+            <li>Deal sourcing & acquisitions</li>
+            <li>Financing structures</li>
+            <li>Cashflow management & reporting</li>
+            <li>Project governance & execution</li>
+          </ul>
+          <p class="text-cyan-300 italic mt-8 text-sm">We don't just develop real estate — we create financial clarity and sustainable returns.</p>
+        </div>
+
+        <div class="order-1 lg:order-2">
+          <p class="text-cyan-300 uppercase tracking-[4px] mb-4 text-sm">Sector 02</p>
+          <h2 class="text-5xl font-black mb-6 leading-tight">
+            Real Estate & <span class="gradient-text">Development</span>
+          </h2>
+          <p class="text-xl text-gray-300 italic mb-6">Building the foundation for economic expansion</p>
+          <p class="text-gray-400 text-lg leading-relaxed mb-8">
+            Economic growth and international investment are driving increasing demand for quality real estate in Suriname — from residential to commercial and mixed-use developments. Watrakan develops and structures real estate projects that capitalize on this momentum.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- AGRIBUSINESS -->
+  <section id="agribusiness" class="py-28 px-6 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <div>
+          <p class="text-cyan-300 uppercase tracking-[4px] mb-4 text-sm">Sector 03</p>
+          <h2 class="text-5xl font-black mb-6 leading-tight">
+            Agribusiness & <span class="gradient-text">Natural Resources</span>
+          </h2>
+          <p class="text-xl text-gray-300 italic mb-6">Unlocking the value of natural capital</p>
+          <p class="text-gray-400 text-lg leading-relaxed mb-8">
+            Suriname possesses exceptional natural wealth — from fertile land to abundant water resources and rich biodiversity. At the same time, global demand for sustainable products and responsible investment continues to rise. Watrakan connects this natural potential to international markets and capital.
+          </p>
+        </div>
+
+        <div class="glass rounded-[40px] p-8 modern-border">
+          <h3 class="text-2xl font-bold mb-8">What we offer:</h3>
+          <ul class="offer-list space-y-4 text-gray-300 text-lg">
+            <li>Agro-investment structuring</li>
+            <li>Export & value chain development</li>
+            <li>Sustainability & ESG strategy</li>
+            <li>Land use & resource advisory</li>
+            <li>Partnership development</li>
+            <li>Financial oversight & performance tracking</li>
+          </ul>
+          <p class="text-cyan-300 italic mt-8 text-sm">From land to return — we make value visible, measurable and scalable.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FINANCIAL SERVICES -->
+  <section id="financial" class="py-28 px-6 bg-black/30 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <div class="glass rounded-[40px] p-8 modern-border order-2 lg:order-1">
+          <h3 class="text-2xl font-bold mb-8">What we offer:</h3>
+          <ul class="offer-list space-y-4 text-gray-300 text-lg">
+            <li>Accounting & reporting</li>
+            <li>Financial oversight & performance monitoring</li>
+            <li>Financial structuring & system setup</li>
+            <li>Compliance & governance</li>
+            <li>Management reporting & dashboards</li>
+          </ul>
+          <p class="text-cyan-300 italic mt-8 text-sm">We translate financial data into clear insights and strategic direction.</p>
+        </div>
+
+        <div class="order-1 lg:order-2">
+          <p class="text-cyan-300 uppercase tracking-[4px] mb-4 text-sm">Sector 04</p>
+          <h2 class="text-5xl font-black mb-6 leading-tight">
+            Financial <span class="gradient-text">Services</span>
+          </h2>
+          <p class="text-xl text-gray-300 italic mb-6">Financial clarity for informed decision-making</p>
+          <p class="text-gray-400 text-lg leading-relaxed mb-8">
+            In fast-growing markets, financial insight is non-negotiable. From investments to daily operations — clear numbers, robust structures and reliable reporting are the foundation of sustainable growth. Watrakan provides financial structure and clarity as the backbone of every business and investment.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MARKETPLACE PLATFORM -->
+  <section class="py-28 px-6 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <p class="text-cyan-300 uppercase tracking-[4px] mb-4 text-sm">Our Platform</p>
+        <h2 class="text-5xl font-black mb-6">Connecting <span class="gradient-text">Opportunity</span></h2>
+        <p class="text-gray-400 text-lg">We provide a platform to identify and reach a specific audience, enabling direct communication between investors, companies, and opportunities in Suriname.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+
+        <div class="glass modern-border rounded-[32px] p-8">
+          <div class="flex items-center justify-between mb-8">
+            <h3 class="text-2xl font-bold">Risk Analysis</h3>
+            <span class="text-4xl">🔍</span>
+          </div>
+          <p class="text-gray-400 leading-relaxed mb-8">Focused analysis of risk involvement in conjunction with excellent business opportunities for visitors to our website seeking sustainable solutions in Oil & Energy in Suriname.</p>
+          <div class="h-2 rounded-full bg-white/10 overflow-hidden">
+            <div class="h-full w-[92%] bg-gradient-to-r from-cyan-300 to-blue-500"></div>
+          </div>
+        </div>
+
+        <div class="glass modern-border rounded-[32px] p-8 lg:-mt-10">
+          <div class="flex items-center justify-between mb-8">
+            <h3 class="text-2xl font-bold">Direct Connection</h3>
+            <span class="text-4xl">🤝</span>
+          </div>
+          <p class="text-gray-400 leading-relaxed mb-8">We give visiting prospects the possibility to directly enter in contact or communicate with Oil & Energy companies and other relevant businesses for site visits or inquiries.</p>
+          <div class="h-2 rounded-full bg-white/10 overflow-hidden">
+            <div class="h-full w-[98%] bg-gradient-to-r from-cyan-300 to-blue-500"></div>
+          </div>
+        </div>
+
+        <div class="glass modern-border rounded-[32px] p-8">
+          <div class="flex items-center justify-between mb-8">
+            <h3 class="text-2xl font-bold">Verified Platform</h3>
+            <span class="text-4xl">✅</span>
+          </div>
+          <p class="text-gray-400 leading-relaxed mb-8">Companies can advertise on our platform to reach our traffic, while we maintain high-quality onboarding checks in view of AML rules, KYC and other relevant regulations.</p>
+          <div class="h-2 rounded-full bg-white/10 overflow-hidden">
+            <div class="h-full w-[95%] bg-gradient-to-r from-cyan-300 to-blue-500"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STRATEGIC APPROACH -->
+  <section class="py-28 px-6 bg-gradient-to-b from-black/40 to-transparent">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+
+      <div>
+        <p class="text-cyan-300 uppercase tracking-[4px] mb-4 text-sm">Strategic Vision</p>
+        <h2 class="text-5xl font-black mb-6 leading-tight">
+          Proven <span class="gradient-text">Methodology</span>
+        </h2>
+        <p class="text-gray-400 text-lg leading-relaxed mb-8">
+          We operate via proven models for change management — the Theory of Change, Design Thinking, and the Logic Model. Based on that input we can better identify the needs of our clients and engage into solutions.
+        </p>
+
+        <div class="space-y-4">
+          <div class="glass rounded-2xl p-5">
+            <h3 class="font-bold text-lg mb-1">Expand Geographically</h3>
+            <p class="text-gray-400 text-sm">Focus on covering the market in Suriname, Guyana, Trinidad and Tobago, and eventually the entire Caribbean.</p>
+          </div>
+          <div class="glass rounded-2xl p-5">
+            <h3 class="font-bold text-lg mb-1">Innovate Continuously</h3>
+            <p class="text-gray-400 text-sm">Invest in AI and advanced risk analysis technologies without losing focus on profitability to stay ahead of competitors.</p>
+          </div>
+          <div class="glass rounded-2xl p-5">
+            <h3 class="font-bold text-lg mb-1">Build Strong Partnerships</h3>
+            <p class="text-gray-400 text-sm">Collaborate with industry leaders and associations to enhance credibility and reach.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass rounded-[40px] p-8 modern-border">
+        <div class="flex justify-between items-center mb-8">
+          <div>
+            <p class="text-gray-400 text-sm">Execution Framework</p>
+            <h3 class="text-3xl font-black">Agile & Data-Driven</h3>
+          </div>
+        </div>
+
+        <div class="space-y-5">
+          <div>
+            <div class="flex justify-between mb-2 text-sm text-gray-400">
+              <span>Effective Marketing</span>
+              <span>Active</span>
+            </div>
+            <div class="h-3 bg-white/10 rounded-full overflow-hidden">
+              <div class="h-full w-[94%] bg-gradient-to-r from-cyan-300 to-blue-500 rounded-full"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-2 text-sm text-gray-400">
+              <span>Customer Engagement</span>
+              <span>High Priority</span>
+            </div>
+            <div class="h-3 bg-white/10 rounded-full overflow-hidden">
+              <div class="h-full w-[89%] bg-gradient-to-r from-cyan-300 to-blue-500 rounded-full"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-2 text-sm text-gray-400">
+              <span>Agile Management</span>
+              <span>Optimized</span>
+            </div>
+            <div class="h-3 bg-white/10 rounded-full overflow-hidden">
+              <div class="h-full w-[96%] bg-gradient-to-r from-cyan-300 to-blue-500 rounded-full"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between mb-2 text-sm text-gray-400">
+              <span>Performance Metrics & KPI Tracking</span>
+              <span>Continuous</span>
+            </div>
+            <div class="h-3 bg-white/10 rounded-full overflow-hidden">
+              <div class="h-full w-[91%] bg-gradient-to-r from-cyan-300 to-blue-500 rounded-full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" class="py-28 px-6">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center mb-16">
+        <h4 class="text-cyan-300 uppercase tracking-[4px] mb-4 text-sm">Leadership</h4>
+        <h2 class="text-5xl font-black">Management Team</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-10">
+
+        <div class="glass rounded-[35px] overflow-hidden">
+          <img src="photos/seth.jpeg" class="h-96 w-full object-cover" alt="Seth Panka" />
+          <div class="p-8">
+            <h3 class="text-3xl font-bold mb-2">Seth Panka</h3>
+            <p class="text-cyan-300 mb-4">General Management</p>
+            <p class="text-gray-400">Leads operationalization with assignments in the areas of environment, forestry, and mining — bridging sustainable resource management with strategic business execution.</p>
+          </div>
+        </div>
+
+        <div class="glass rounded-[35px] overflow-hidden">
+          <img src="photos/ricardo.jpeg" class="h-96 w-full object-cover" alt="Ricardo Bryson" />
+          <div class="p-8">
+            <h3 class="text-3xl font-bold mb-2">Ricardo Bryson</h3>
+            <p class="text-cyan-300 mb-4">General Management</p>
+            <p class="text-gray-400">Leads operationalization with assignments in the areas of legal and financial issues, such as investments and international law.</p>
+          </div>
+        </div>
+
+        <div class="glass rounded-[35px] overflow-hidden">
+          <img src="photos/lorenzo.jpeg" class="h-96 w-full object-cover" alt="Lorenzo Kensmil" />
+          <div class="p-8">
+            <h3 class="text-3xl font-bold mb-2">Lorenzo Kensmil</h3>
+            <p class="text-cyan-300 mb-4">General Management</p>
+            <p class="text-gray-400">Leads operationalization with assignments in the areas of accountancy, cybersecurity, CARICOM Single Market Specialist, and CARICOM networks.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="py-20 px-6 border-t border-white/10">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
+
+      <div>
+        <h2 class="text-3xl font-black gradient-text mb-3">WATRAKAN</h2>
+        <p class="text-gray-400 leading-relaxed">
+          Accounting & Consulting Firm N.V.<br>
+          Where natural resources meet intelligence.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-xl mb-4">Sectors</h3>
+        <ul class="space-y-3 text-gray-400">
+          <li>Oil & Energy</li>
+          <li>Real Estate & Development</li>
+          <li>Agribusiness & Natural Resources</li>
+          <li>Financial Services</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-xl mb-4">Markets</h3>
+        <ul class="space-y-3 text-gray-400">
+          <li>Suriname</li>
+          <li>Guyana</li>
+          <li>Trinidad & Tobago</li>
+          <li>The Caribbean</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-xl mb-4">Contact</h3>
+        <ul class="space-y-3 text-gray-400">
+          <li>Paramaribo, Suriname</li>
+          <li>info@watrakan.com</li>
+          <li>+597 000-0000</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="text-center text-gray-500 mt-16 border-t border-white/10 pt-8">
+      WatraKan Accounting & Consulting Firm N.V. · Where natural resources meet intelligence. · © 2025
+    </div>
+  </footer>
+
+</body>
+</html>
